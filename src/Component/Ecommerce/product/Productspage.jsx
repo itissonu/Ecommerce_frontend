@@ -11,12 +11,15 @@ import { useLocation } from 'react-router-dom'
 import Productloader from '../../../utils/Productloader'
 import { updateParams } from '../../../redux_toolkit/paramSlice'
 import Pagenation from './Pagenation'
+import axios from 'axios'
+import { URL } from '../../../utils/serverurl'
 export const Productspage = () => {
     const productstate = useSelector((state) => state.allproducts);
     const wishliststate = useSelector((state) => state.wishlistproducts)
     const dispatch = useDispatch();
     const params = useSelector((state) => state.params);
-   
+ 
+  
     const { minPrice, maxPrice, category, colors, brand, search } = params;
     useEffect(() => {
 

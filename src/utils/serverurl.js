@@ -1,1 +1,1 @@
-export const URL="https://ecommerce-backend-project.onrender.com/"
+export const URL="https://ecommerce-backend-project.onrender.com/app/"

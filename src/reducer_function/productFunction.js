@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { URL } from '../utils/serverurl'
-
+console.log(URL+"url");
 const getallproducts = async (params) => {
   try {
     console.log(params.page)
