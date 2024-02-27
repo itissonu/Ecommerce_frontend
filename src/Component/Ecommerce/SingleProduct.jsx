@@ -160,13 +160,13 @@ const SingleProduct = () => {
 
           <div className="flex-[55%] flex h-max flex-col  justify-center gap-4 flex-wrap p-1">
             <img
-              className=""
+              className="md:h-full h-[390px]"
               src={product?.images[0]?.url}
               alt="image"
             /><div className="flex flex-wrap gap-3 p-4 h-1/2">
               {product.images.map((image, i) => (
                 <img key={i}
-                  className="h-[130px] w-[130px] md:h-[270px] md:w-[270px] "
+                  className="h-[50px] w-[50px] md:h-[270px] md:w-[270px] "
                   src={image?.url}
                   alt="image"
                 />

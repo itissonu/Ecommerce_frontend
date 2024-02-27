@@ -9,7 +9,7 @@ const Filter = ({toggleDrawerFilter,openDrawerFilter}) => {
     
    
     const DrawerList = (
-        <Box sx={{ width: 350 }} role="presentation" >
+        <Box sx={{ width: 320 }} role="presentation" >
 
             <ProductSidebar/>
 

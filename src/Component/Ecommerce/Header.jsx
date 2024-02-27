@@ -90,8 +90,8 @@ export const Header = () => {
                 </div>
 
                 <div className='w-full h-20 bg-white border-t-[0.5px] border-gray-500  z-20   shadow-xl  flex justify-center'>
-                    <div onClick={toggleDrawer(true)} className='w-auto flex items-center h-20 bg-slate-50 '>
-                        <img className=' mx-3 h-6 w-6 sm:hidden hover:cursor-pointer' src={menu} />
+                    <div onClick={toggleDrawer(true)} className='w-16 flex items-center h-20 bg-slate-50 '>
+                        <img className=' mx-[4px] h-6 w-6 sm:hidden hover:cursor-pointer' src={menu} />
                     </div>
                     <div className='flex items-center justify-between w-[1200px] '>
                         <div className='flex h-full items-center'>
@@ -107,7 +107,7 @@ export const Header = () => {
                                 <li className='text-xl font-mono font-extrabold  text-gray-800 list-none'>  <a> Shoes</a>  </li>
                             </div>
                         </div>
-                      {(actpath[2]==='products')&& <div className='mx-[3px] flex flex-col md:hidden'>
+                      {(actpath[2]==='products')&& <div className=' flex flex-col md:hidden'>
                       <CiFilter onClick={toggleDrawerFilter(true)} className='h-6 w-6 hover:cursor-pointer '/>
                             {/* <img  onClick={toggleDrawerFilter(true)} className='h-6 w-6 hover:cursor-pointer' src={wishlist} /> */}
                             <span className='text-xs'>Filter</span>
@@ -117,7 +117,7 @@ export const Header = () => {
                         <div className='hidden md:flex justify-center items-center h-[100%]  '>
                             <div className='flex relative'><form onSubmit={handlesubmit}>
                                 <input onChange={(e) => setSearch(e.target.value)} className=' p-2 outline-none  w-56  bg-[#eaeaea] border border-transparent ' type='text' placeholder='Search for products' /></form>
-                                <img className='h-6 w-6 absolute top-[12px] left-[-1.75rem] mr-2' src={search} />
+                                <img className='h-6 w-6 absolute top-[12px] left-[-1.75rem] ' src={search} />
                             </div>
                             <div onClick={() => {
                                 if (userPresent) {
@@ -128,7 +128,7 @@ export const Header = () => {
                                 }
                             }} className='relative flex h-full items-center hover:border-b-4 border-yellow-400'>
                                 <span className='flex absolute top-[1.25rem] rounded-[100%] z-10 bg-red-600 h-3 w-3 text-white font-extrabold  text-[9px] justify-center items-center right-2'>{storedwishlist.length || 0}</span>
-                                <img className='h-6 w-6 mx-3  transition-transform transform hover:scale-110 hover:shadow-lg hover:cursor-pointer' src={wishlist} />
+                                <img className='h-6 w-6 mx-1  transition-transform transform hover:scale-110 hover:shadow-lg hover:cursor-pointer' src={wishlist} />
                             </div>
                             <div onClick={() => {
                                 if (userPresent) {

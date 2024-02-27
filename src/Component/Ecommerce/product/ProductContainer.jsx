@@ -78,7 +78,7 @@ function ProductContainer({ products }) {
                     </div>
                 </div> : products?.map((product, id) => (
                     <div onClick={() => navigate(`/user/singleProduct/${product._id}`)} onMouseOver={() => setHoveredProduct(id)}
-                        onMouseOut={() => setHoveredProduct(null)} className='w-[11.5rem] md:w-[300px] h-[470px]  justify-center m-2 shadow-xl items-center flex flex-col ' key={id} >
+                        onMouseOut={() => setHoveredProduct(null)} className='w-[10rem] md:w-[300px] h-[460px]  justify-center m-2 shadow-xl items-center flex flex-col ' key={id} >
 
                         <div className='p-4 relative  w-full '>
                             {!(hoveredProduct === id) && <span className={`text-xs border-1 border-gray-400 bg-gray-700 text-white p-1 absolute top-5 left-0 shadow-md transform transition-transform translate-x-4`}>
@@ -99,9 +99,9 @@ function ProductContainer({ products }) {
                             <span className='absolute bottom-[26px] right-7 flex  bg-slate-100 items-center  p-1 font-mono text-[12px] '>4.4<IoStar className='h-3 m-1 w-3 text-[#117a7a]' /></span>
 
                             {(hoveredProduct === id && product.images[1]) ? (
-                                <img className='object-fit h-[16rem] md:h-72 w-72' src={product.images[1].url} alt="Second Image" />
+                                <img className='object-fit h-[14rem] md:h-72 w-72' src={product.images[1].url} alt="Second Image" />
                             ) : (
-                                <img className=' h-[16rem] md:h-72 w-72' src={product.images[0].url} alt="First Image" />
+                                <img className=' h-[14rem] md:h-72 w-72' src={product.images[0].url} alt="First Image" />
                             )}
 
                         </div>
@@ -111,7 +111,7 @@ function ProductContainer({ products }) {
 
                             <div className='flex  p-2 items-center'>
                                 <span className='font-[700] text-sm '>Rs.{product.price}</span>
-                                <span className='text-red-600  mx-2'>{product.discount}% OFF</span>
+                                <span className='text-red-600 md:text-base text-xs mx-2'>{product.discount}% OFF</span>
                             </div>
                         </div>
                     </div>

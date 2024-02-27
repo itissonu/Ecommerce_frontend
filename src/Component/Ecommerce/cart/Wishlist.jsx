@@ -85,7 +85,7 @@ export const Wishlist = () => {
       </div>
       <div className='w-full h-full flex flex-wrap mt-6'>
         {products.map((product, id) => (
-          <div onClick={() => navigate(`/user/singleProduct/${product?.ProductId?._id}`)} className='w-[12rem] md:w-[19rem] h-[440px] md:h-[505px]  justify-center m-2 shadow-xl items-center flex flex-col rounded-[10px]' key={id} >
+          <div onClick={() => navigate(`/user/singleProduct/${product?.ProductId?._id}`)} className='w-[10.5rem] md:w-[19rem] h-[440px] md:h-[505px]  justify-center m-2 shadow-xl items-center flex flex-col rounded-[10px]' key={id} >
             <div className=' relative h-64 '>
               <span className='text-xs border-1 border-gray-400 bg-[darkseagreen]
                
@@ -105,11 +105,11 @@ export const Wishlist = () => {
               <button onClick={(e) => {
                 e.stopPropagation();
                 handleAdd(product.ProductId._id, ((product.ProductId?.price) - (product?.ProductId?.price) * (product?.ProductId?.discount / 100)).toFixed(0), product.ProductId?.size[0])
-              }} className='font-bold text-base p-2 border-[1px] border-[#e93d67] text-[#e93d67]'>MOVE TO BAG</button>
+              }} className='font-bold text-xs md:text-base p-2 border-[1px] border-[#e93d67] text-[#e93d67]'>MOVE TO BAG</button>
               <button onClick={(e) => {
                 e.stopPropagation();
                 handleReove(product.ProductId._id)
-              }} className='font-bold text-base p-2 border-[1px] border-[gray] text-[gray]'>REMOVE</button>
+              }} className='font-bold text-sm md:text-base p-2 border-[1px] border-[gray] text-[gray]'>REMOVE</button>
             </div>{console.log()}
           </div>
         ))
