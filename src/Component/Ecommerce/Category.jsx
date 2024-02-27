@@ -23,7 +23,7 @@ export const Category = () => {
     { id: 7, name: "Shoes", src: Shoes },
     { id: 8, name: "Hoodie", src: Hoodie },
     { id: 9, name: "Shoes", src: Shoes },
-    { id: 10, name: "Hoodie", src: Hoodie }
+    // { id: 10, name: "Hoodie", src: Hoodie }
   ];
   const navigate = useNavigate();
   // console.log(categories[0].src)
@@ -53,9 +53,9 @@ useEffect(() => {
 
 
       <div className=' mt-3 h-max w-full flex  flex-wrap justify-center  '>
-
+            
         {categories.map((card, id) => (
-          <div onClick={() => handleselectcategory(card.name)} key={id} className={`rounded-md border-[1px] hover:font-bold border-gray-500 w-[300px] h-[300px] flex flex-col m-2 shadow-xl justify-center items-center mx-5 p-3 hover:cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-gray-400`} >
+          <div onClick={() => handleselectcategory(card.name)} key={id} className={`rounded-md border-[1px] hover:font-bold border-gray-500 w-[100px] h-[139px]  md:w-[300px] md:h-[300px] flex flex-col m-2 shadow-xl justify-center items-center mx-5 p-3 hover:cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-gray-400`} >
             <img className=' w-40 h-40 hover:w-full hover:h-full object-cover transition-all duration-300  ease-in hover:z-10' src={card.src} />
             <span className='mt-4 text-[20px] font-mono text-gray-700 hover:font-bold hover:hidden '>{card.name}</span>
           </div>

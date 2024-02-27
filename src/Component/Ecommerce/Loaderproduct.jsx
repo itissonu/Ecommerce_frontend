@@ -14,8 +14,8 @@ export default ProductCardSkeleton;
 
 export const Loaderproduct = () => {
   return (
-    <div className="grid grid-cols-3 gap-2 w-[1000px]">
-      {[...Array(9)].map((_, index) => (
+    <div className="grid grid-cols-4 gap-2 w-full">
+      {[...Array(16)].map((_, index) => (
         <ProductCardSkeleton key={index} />
       ))}
     </div>

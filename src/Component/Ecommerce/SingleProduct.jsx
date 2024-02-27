@@ -61,9 +61,16 @@ const SingleProduct = () => {
     fetchData();
 
   }, [id, wishliststate?.wishproducts?.length]);
-
+  const storedUserData = localStorage.getItem('user');
 
   const handleAdd = async () => {
+    
+      if (storedUserData) {
+      
+      }else{
+        navigate('/login');
+      }
+    
     if (!size)
       seterror(true)
     if (size && selectedQuantity) {
@@ -77,6 +84,11 @@ const SingleProduct = () => {
     }
   }
   const handleAddwish = async () => {
+    if (storedUserData) {
+      
+    }else{
+      navigate('/login');
+    }
     const body = { ProductId: id, FinalPrice: product?.price }
     await dispatch(AddWishlistGProduct(body))
     setAnimateHeart(true);
@@ -144,7 +156,7 @@ const SingleProduct = () => {
       {cartAdd && <ProductBagged/>}
       <Header />
       {(loading) ? <Loaderproduct /> :
-        <div className="flex  mt-[7rem]">
+        <div className="flex-col md:flex-row flex  mt-[7rem]">
 
           <div className="flex-[55%] flex h-max flex-col  justify-center gap-4 flex-wrap p-1">
             <img
@@ -154,7 +166,7 @@ const SingleProduct = () => {
             /><div className="flex flex-wrap gap-3 p-4 h-1/2">
               {product.images.map((image, i) => (
                 <img key={i}
-                  className="h-[270px] w-[270px] "
+                  className="h-[130px] w-[130px] md:h-[270px] md:w-[270px] "
                   src={image?.url}
                   alt="image"
                 />
@@ -162,7 +174,7 @@ const SingleProduct = () => {
 
           </div>
 
-          <div className=" flex flex-col p-4 flex-[45%] mx-auto border-l-[1px] border-gray-200">
+          <div className=" flex flex-col w-full p-4 md:flex-[45%] mx-auto border-l-[1px] border-gray-200">
             <div className="text-2xl font-bold capitalize">{product?.brand}</div>
             <div className="text-lg  text-gray-500 flex flex-wrap py-2">
               {product?.name}
@@ -174,7 +186,7 @@ const SingleProduct = () => {
               <span className="capitalize text-sm block mb-3">
                 Inclusive of all taxes
               </span>
-              <div className="capitalize h-content  p-2 bg-slate-300 rounded-lg flex gap-6 text-lg mb-4 w-max">
+              <div className="capitalize h-content  p-2 bg-slate-300 rounded-lg flex gap-6 text-lg mb-4 md:w-max">
                 <span className="text-xs xs:text-sm">Price ₹459</span>
                 <span className="text-sm flex items-center ">
                   SaveEXTRA ₹200with TriBe and, enjoy FREE Delivery above ₹2000 shopping

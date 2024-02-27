@@ -266,7 +266,7 @@ export const AddAddress = () => {
                     razorpaySignature: response.razorpay_signature,
                 };
 
-                const result = await axios.post("http://localhost:8001/app/order/orders/paymentverification", data, {
+                const result = await axios.post("https://ecommerce-backend-project.onrender.com/app/order/orders/paymentverification", data, {
                     withCredentials: true,
                 });
                 // console.log(result)
@@ -344,7 +344,7 @@ export const AddAddress = () => {
                 <Progress />
             </div>
             <div className='p-4 full flex justify-center items-center '>
-                <div className='w-[80%] flex'>
+                <div className='md:w-[80%] flex-col md:flex-row flex'>
                     <div className='flex-[55%] flex flex-col w-full p-4 '>
                         <div className='flex justify-end  border-[1px] p-4  border-gray-300 shadow-md'>
 
@@ -355,7 +355,7 @@ export const AddAddress = () => {
                         <div>
                             {existingAddress.map((address, index) => (
 
-                                <div key={index} className={`${border === index ? 'border-blue-500 shadow-sky-300' : 'border-slate-200'} w-[60%] flex p-4 shadow-md border-[1px] flex-col m-3`}>
+                                <div key={index} className={`${border === index ? 'border-blue-500 shadow-sky-300' : 'border-slate-200'} md:w-[60%] w-[90%] flex p-4 shadow-md border-[1px] flex-col m-3`}>
                                     <div className='flex justify-end '><input className='h-5 w-5'
                                         type="radio"
                                         name="addressRadio"
@@ -394,7 +394,7 @@ export const AddAddress = () => {
                                 ))
                             }
                         </div>
-                        <div className='m-5  border-[1px] border-gray-300 w-[65%] flex flex-col '>
+                        <div className='m-5  border-[1px] border-gray-300 w-[85%] md:w-[65%] flex flex-col '>
                             <div className='w-full shadow-sm bg-gray-200 font-semibold p-3 flex border-b-[1px] border-gray-300 justify-center items-center'>
                                 <span  >
                                     BILLING DETAIS

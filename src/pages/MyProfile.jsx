@@ -109,9 +109,9 @@ export const MyProfile = () => {
             <div className='mt-28 flex justify-center bg-red-700 text-white font-serif font-extrabold'>
                 <h2 className='p-4 bg-red-700 text-white font-serif font-extrabold'> MY PROFILE</h2>
             </div>
-            <div className='h-screen w-full  flex  justify-center items-center'>
-                <div className='h-[60%] w-4/5 p-8 border-gray-300 border-[1px] flex-col flex shadow-lg'>
-                    <div className='flex flex-[50%] bg-slate-100 p-3'>
+            <div className='h-full w-full  flex  justify-center items-center'>
+                <div className='h-screen  md:h-[60%]  w-full md:w-4/5 md:p-8 border-gray-300 border-[1px] flex-col flex shadow-lg'>
+                    <div className='flex flex-col md:flex-[50%] bg-slate-100 p-3'>
                         <img className='w-40 h-40 rounded-sm mx-5 ' src={user.profilePhoto} alt='img' />
                         <div className='flex flex-col flex-[60%]  '>
                             <div className='flex justify-between'>
@@ -123,19 +123,19 @@ export const MyProfile = () => {
 
                         </div>
                     </div>
-                    <div className='w-full flex justify-between flex-[45%] p-3'>
-                        <div onClick={() => (navigate('/user/myorders'))} className='border-[1px] border-gray-300 shadow-lg h-[70%] w-[20%] flex justify-center flex-col items-center hover:bg-gray-100 hover:cursor-pointer'>
+                    <div className='w-full h-1/4 flex justify-between md:flex-[45%] p-3'>
+                        <div onClick={() => (navigate('/user/myorders'))} className='border-[1px] border-gray-300 shadow-lg h-[70%] w-[30%] md:h-[70%] md:w-[20%] flex  justify-between flex-col items-center hover:bg-gray-100 hover:cursor-pointer'>
                             <img className='w-14 h-14' src={wishlist} />
                             <span className='font-bold'>Orders</span>
-                            <span className='text-thin text-gray-400 text-xs'>Check your order status</span>
+                            <span className='text-thin text-gray-400 text-xs mx-1'>Check your order status</span>
                         </div>
-                        <div onClick={() => (navigate('/user/myorders'))} className='border-[1px] border-gray-300 shadow-lg h-[70%] w-[20%] flex justify-center flex-col items-center hover:bg-gray-100 hover:cursor-pointer'>
+                        <div onClick={() => (navigate('/user/myorders'))} className='border-[1px] border-gray-300 shadow-lg h-[70%] w-[30%] md:h-[70%] md:w-[20%]  flex justify-center flex-col items-center hover:bg-gray-100 hover:cursor-pointer'>
                             <img className='w-14 h-14' src={order} />
                             <span className='font-bold'> Collection & Wishlist</span>
-                            <span className='text-thin text-gray-400 text-xs'>All your curated product collection</span></div>
-                        <div onClick={() => (navigate('/user/cart'))} className='border-[1px] border-gray-300 shadow-lg h-[70%] w-[20%] flex justify-center flex-col items-center hover:bg-gray-100 hover:cursor-pointer'>
+                            <span className='text-thin text-gray-400 text-xs mx-1'>All your curated product collection</span></div>
+                        <div onClick={() => (navigate('/user/cart'))} className='border-[1px] border-gray-300 shadow-lg h-[70%] w-[30%] md:h-[70%] md:w-[20%]  flex justify-center flex-col items-center hover:bg-gray-100 hover:cursor-pointer'>
                             <img className='w-14 h-14' src={cart} />
-                            <span className='font-bold  '>My Cart</span>  <span className='text-thin text-gray-400 text-xs'>All you product in the cart</span></div>
+                            <span className='font-bold  '>My Cart</span>  <span className='text-thin text-gray-400 mx-1 text-xs'>All you product in the cart</span></div>
 
                     </div>
                     <div className='w-full flex justify-center'>

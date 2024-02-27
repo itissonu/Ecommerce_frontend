@@ -91,6 +91,7 @@ export const wishlistSlice = createSlice({
                     state.success = false;
                     state.message = "problem in adding the product" || "Internal error ";
                     if (state.success === false) {
+                       
                         toast.error(action.error?.message)
                     }
                 })

@@ -373,8 +373,8 @@ export const MyOrders = () => {
                     orders?.map((order, index) => (
                         <div>
                             {order?.orderItems?.map((singleProduct, i) => (
-                                <div className='flex flex-col border-[1px] border-gray-300 w-1/2 p-9 m-2 shadow-lg'>
-                                    <div className='flex w-full  m-4'>
+                                <div className='flex flex-col border-[1px] border-gray-300 w-full md:w-1/2 md:p-9 m-2 shadow-lg'>
+                                    <div className='flex w-full flex-col  m-4'>
                                         <div className='flex flex-[60%]'>
                                             <img className='mx-4 h-20 w-20 rounded-sm' src={singleProduct.image} />
                                             <div >
@@ -391,7 +391,7 @@ export const MyOrders = () => {
                                             </div>
 
                                         </div>
-                                        <div className='flex flex-[40%] justify-end' >
+                                        <div className='flex flex-[40%] md:justify-end' >
                                             <div className='flex flex-col w-max h-max p-3 bg-[whitesmoke] justify-center'>
                                                 <span className='text-white font-bold p-2 rounded-lg bg-green-700'>Delivery Status -{order.orderStatus}</span>
                                                 <span className='text-gray-800  font-semibold'> Payment Status -{order.paymentInfo.status}</span>

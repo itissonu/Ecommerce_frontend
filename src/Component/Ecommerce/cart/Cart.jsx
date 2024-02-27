@@ -184,7 +184,7 @@ export const Cart = () => {
             </div>
             {cartstate?.loading ? <Cartloader /> :
                 <div className='p-4 full flex justify-center items-center '>
-                    <div className='w-[80%] flex'>
+                    <div className='md:w-[80%] md:flex-row flex-col flex'>
                         <div className='flex-[55%] flex flex-col w-full p-4 '>
                             <div className='flex p-6 justify-between items-center border-[1px] border-gray-300'>
                                 <span>Deliverd to:761105</span>

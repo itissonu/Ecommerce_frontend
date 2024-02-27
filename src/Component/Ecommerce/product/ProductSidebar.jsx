@@ -22,8 +22,9 @@ export const ProductSidebar = () => {
         : ['TShirts', 'Shirts', 'Jeans', 'Dresses', 'Sweaters', 'Jackets', 'Shorts', 'Skirts', 'Activewear', 'Suits', 'Socks', 'Accessories', 'Shoes',];
     const brands = More ? ['Nike', 'Adidas', 'Puma', 'Levi\'s', 'Gap', 'H&M', 'Zara', 'Calvin Klein'] : ['Nike', 'Adidas', 'Puma', 'Levi\'s', 'Gap', 'H&M', 'Zara', 'Calvin Klein', 'Tommy Hilfiger', 'Under Armour', 'Fila', 'Converse', 'Vans', 'Reebok'];
     const colorOptions = ['pink', 'blue', 'green', 'yellow', 'purple', 'orange', 'brown', 'red', 'gray', 'black', 'white', 'cyan'];
+    
     const dispatch = useDispatch();
-
+console.log(selectedCategoriessecond)
     const handleSelect = async (event) => {
         const value = event.target.value;
 
@@ -33,7 +34,7 @@ export const ProductSidebar = () => {
             await setSelectedCategories((prevSelected) => {
                 const updatedCategories = prevSelected.filter((category) => category !== value);
                 console.log(updatedCategories + "ip");
-                console.log(selectedCategories + "non")
+                console.log(selectedCategories + "non");
                 return updatedCategories;
             });
         }
@@ -70,6 +71,7 @@ export const ProductSidebar = () => {
     const handleRangeChange = (newRange) => {
       setRange(newRange);
     };
+
     const [minValue, maxValue] = range;
   
   

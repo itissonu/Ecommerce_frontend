@@ -27,7 +27,7 @@ export const Footer = () => {
 
                     <div>
                         <h2 className="text-lg  text-yellow-400 font-semibold mb-2">Social Links</h2>
-                        <ul className="flex space-x-2">
+                        <ul className="flex space-x-2 flex-col">
                             <li>
                                 <a href="#d" className="text-blue-500">
                                     Facebook
@@ -46,7 +46,7 @@ export const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className=' border-t-2 border-white flex justify-between p-12'>
+                <div className=' border-t-2 border-white flex justify-between md:p-12 text-[12px] md:text-base'>
                     <div className=' '>
                         <ul className='text-white hover:cursor-pointer'>
                             <li>contact us</li>
